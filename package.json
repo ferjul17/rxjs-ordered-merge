@@ -11,7 +11,9 @@
     "test": "mocha dist/test/",
     "pretest": "npm run build",
     "build": "tsc",
-    "prebuild": "npm i"
+    "prebuild": "npm i",
+    "watch": "tsc --watch",
+    "prewatch": "npm i"
   },
   "author": "Julien Ferrier",
   "license": "MIT",
