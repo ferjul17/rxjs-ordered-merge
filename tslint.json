@@ -1,0 +1,48 @@
+{
+    "defaultSeverity": "error",
+    "extends": [
+        "tslint:recommended"
+    ],
+    "rules": {
+        "no-floating-promises": true,
+        "no-invalid-this": true,
+        "no-for-in-array": true,
+        "use-isnan": true,
+        "no-conditional-assignment": true,
+
+
+        "variable-name": {
+            "options": ["ban-keywords", "check-format", "allow-pascal-case", "allow-leading-underscore"]
+        },
+        "object-literal-sort-keys": false,
+        "no-console": false,
+        "no-shadowed-variable": false,
+        "ordered-imports": false,
+        "quotemark": false,
+        "prefer-const": false,
+        "curly": false,
+        "typedef-whitespace": false,
+        "whitespace": false,
+        "no-string-literal": false,
+        "trailing-comma": false,
+        "max-line-length": false,
+        "no-trailing-whitespace": false,
+        "arrow-parens": false,
+        "no-consecutive-blank-lines": false,
+        "semicolon": false,
+        "one-line": false,
+        "align": false, // a verifier
+        "member-ordering": false, // plus tard
+        "object-literal-shorthand": false,
+        "only-arrow-functions": false,
+        "space-before-function-paren": false,
+        "no-empty": false,
+        "indent": false, // plus tard
+        "interface-name": false,
+        "max-classes-per-file": false,
+        "prefer-for-of": false, // warning ?
+        "no-bitwise": false,
+        "comment-format": false,
+        "class-name": false
+    }
+}

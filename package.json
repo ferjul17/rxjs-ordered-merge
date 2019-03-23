@@ -1,0 +1,30 @@
+{
+  "name": "rxjs-ordered-merge",
+  "version": "1.0.0",
+  "description": "RxJS orderedMerge operator",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:ferjul17/rxjs-ordered-merge.git"
+  },
+  "scripts": {
+    "test": "mocha dist/test/",
+    "pretest": "npm run build",
+    "build": "tsc",
+    "prebuild": "npm i"
+  },
+  "author": "Julien Ferrier",
+  "license": "MIT",
+  "dependencies": {
+    "rxjs": "^6.4.0"
+  },
+  "devDependencies": {
+    "mocha": "^6.0.2",
+    "chai": "^4.2.0",
+    "typescript": "^3.4.0-rc",
+    "tslint": "^5.14.0",
+    "@types/chai": "^4.1.7",
+    "@types/mocha": "^5.2.6",
+    "@types/node": "^11.11.6"
+  }
+}
