@@ -76,4 +76,28 @@ describe("orderedMerge", () => {
         expect(Math.min(...concurrentJobs)).to.be.equal(0);
     });
 
+    it("should start a new job as soon as another one finish", async () => {
+        const events: number[] = [];
+        await from([
+            of(1).pipe(
+                tap((n) => events.push(n)),
+                delay(50),
+                tap((n) => events.push(n)),
+            ),
+            of(2).pipe(
+                tap((n) => events.push(n)),
+                delay(10),
+                tap((n) => events.push(n)),
+            ),
+            of(3).pipe(
+                tap((n) => events.push(n)),
+                delay(10),
+                tap((n) => events.push(n)),
+            )
+        ]).pipe(
+            orderedMerge(2),
+        ).toPromise();
+        expect(events).to.be.deep.equal([1, 2, 2, 3, 3, 1])
+    });
+
 });
